@@ -3,8 +3,8 @@ import { combineReducers } from 'redux';
 // import itemsReducer from './items/items-reducer';
 // import filterReducer from './filter/filter-reducer';
 
-import { filterSlise } from './filter/filter-reducer';
-import { itemsSlice } from './items/items-reducer';
+import { filterSlise } from './filter/filter-slise';
+import { itemsSlice } from './items/items-slise';
 
 // export const contactsReducer = combineReducers({
 //   items: itemsReducer,

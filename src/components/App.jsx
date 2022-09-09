@@ -8,8 +8,8 @@ import Filter from './Filter/Filter';
 // import { addContactsItem, deleteContactsItem } from 'redux/items/items-actions';
 // import { setFilter } from 'redux/filter/filter-actions';
 // =========================================
-import { filterSlise } from 'redux/filter/filter-reducer';
-import { itemsSlice } from 'redux/items/items-reducer';
+import { filterSlise } from 'redux/filter/filter-slise';
+import { itemsSlice } from 'redux/items/items-slise';
 // ============================================================
 
 import { getContactsItems } from 'redux/items/items-selectors';

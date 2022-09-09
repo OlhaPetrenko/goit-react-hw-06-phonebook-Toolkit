@@ -1,8 +1,5 @@
-// import { createReducer } from '@reduxjs/toolkit';
-// import { addContactsItem, deleteContactsItem } from './items-actions';
-
-import { createSlice } from '@reduxjs/toolkit';
-import { nanoid } from 'nanoid';
+import { createReducer } from '@reduxjs/toolkit';
+import { addContactsItem, deleteContactsItem } from './items-actions';
 
 const initialStore = [
   // { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -11,27 +8,10 @@ const initialStore = [
   // { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
-// const itemsReducer = createReducer(initialStore, {
-//   [addContactsItem]: (store, { payload }) => [...store, payload],
-//   [deleteContactsItem]: (store, { payload }) =>
-//     store.filter(item => item.id !== payload),
-// });
-
-// export default itemsReducer;
-
-export const itemsSlice = createSlice({
-  name: 'items',
-  initialState: initialStore,
-  reducers: {
-    addContactsItem: {
-      reducer: (store, { payload }) => [...store, payload],
-      prepare: (name, number) => {
-        return {
-          payload: { name, number, id: nanoid() },
-        };
-      },
-    },
-    deleteContactsItem: (store, { payload }) =>
-      store.filter(item => item.id !== payload),
-  },
+const itemsReducer = createReducer(initialStore, {
+  [addContactsItem]: (store, { payload }) => [...store, payload],
+  [deleteContactsItem]: (store, { payload }) =>
+    store.filter(item => item.id !== payload),
 });
+
+export default itemsReducer;
