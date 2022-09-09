@@ -8,8 +8,8 @@ import Filter from './Filter/Filter';
 // import { addContactsItem, deleteContactsItem } from 'redux/items/items-actions';
 // import { setFilter } from 'redux/filter/filter-actions';
 // =========================================
-import { filterSlise } from 'redux/filter/filter-slise';
-import { itemsSlice } from 'redux/items/items-slise';
+import { filterSlice } from 'redux/filter/filter-slice';
+import { itemsSlice } from 'redux/items/items-slice';
 // ============================================================
 
 import { getContactsItems } from 'redux/items/items-selectors';
@@ -18,7 +18,7 @@ import { getContactsFilter } from 'redux/filter/filter-selectors';
 import s from './App.module.css';
 
 function App() {
-  const { setFilter } = filterSlise.actions;
+  const { setFilter } = filterSlice.actions;
   const { addContactsItem, deleteContactsItem } = itemsSlice.actions;
 
   const contactsItems = useSelector(getContactsItems);
